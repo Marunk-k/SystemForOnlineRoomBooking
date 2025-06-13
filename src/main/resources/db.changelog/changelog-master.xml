@@ -8,17 +8,15 @@
     <!-- Tables -->
     <!-- Сначала создаем таблицы без зависимостей -->
     <include file="table/role-table.xml" relativeToChangelogFile="true"/>
-    <include file="table/client-table.xml" relativeToChangelogFile="true"/>
     <include file="table/room-table.xml" relativeToChangelogFile="true"/>
 
     <!-- Затем таблицы с зависимостями -->
-    <include file="table/employee-table.xml" relativeToChangelogFile="true"/>
+    <include file="table/app-user-table.xml" relativeToChangelogFile="true"/>
     <include file="table/booking-table.xml" relativeToChangelogFile="true"/>
     <include file="table/regulation-table.xml" relativeToChangelogFile="true"/>
 
     <!-- Data -->
-    <include file="data/client-data.xml" relativeToChangelogFile="true"/>
     <include file="data/role-data.xml" relativeToChangelogFile="true"/>
-    <include file="data/employee-data.xml" relativeToChangelogFile="true"/>
+    <include file="data/app-user-data.xml" relativeToChangelogFile="true"/>
     <include file="data/room-data.xml" relativeToChangelogFile="true"/>
 </databaseChangeLog>

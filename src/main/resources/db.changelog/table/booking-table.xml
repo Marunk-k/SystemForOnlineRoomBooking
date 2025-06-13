@@ -9,7 +9,7 @@
         <sql>
             CREATE TABLE booking (
                                      id SERIAL PRIMARY KEY,
-                                     client_id INTEGER REFERENCES client(id),
+                                     app_user_id INTEGER REFERENCES app_user(id),
                                      room_id INTEGER REFERENCES room(id),
                                      check_in_date VARCHAR(20) NOT NULL,
                                      check_out_date VARCHAR(20) NOT NULL,

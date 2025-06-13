@@ -5,9 +5,9 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
     http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.20.xsd">
 
-    <changeSet id="create-employee-table" author="you">
+    <changeSet id="create-app-user-table" author="you">
         <sql>
-            CREATE TABLE employee (
+            CREATE TABLE app_user (
                                       id SERIAL PRIMARY KEY,
                                       full_name VARCHAR(150) NOT NULL,
                                       phone VARCHAR(20) NOT NULL,

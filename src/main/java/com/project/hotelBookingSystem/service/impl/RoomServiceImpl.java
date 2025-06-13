@@ -1,7 +1,6 @@
 package com.project.hotelBookingSystem.service.impl;
 
 import com.project.hotelBookingSystem.entity.Room;
-import com.project.hotelBookingSystem.repository.EmployeeRepository;
 import com.project.hotelBookingSystem.repository.RoomRepository;
 import com.project.hotelBookingSystem.service.RoomService;
 import lombok.AllArgsConstructor;

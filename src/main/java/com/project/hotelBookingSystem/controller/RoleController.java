@@ -1,8 +1,6 @@
 package com.project.hotelBookingSystem.controller;
 
-import com.project.hotelBookingSystem.entity.Client;
 import com.project.hotelBookingSystem.entity.Role;
-import com.project.hotelBookingSystem.service.ClientService;
 import com.project.hotelBookingSystem.service.RoleService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;

@@ -1,6 +1,5 @@
 package com.project.hotelBookingSystem.repository;
 
-import com.project.hotelBookingSystem.entity.Client;
 import com.project.hotelBookingSystem.entity.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 

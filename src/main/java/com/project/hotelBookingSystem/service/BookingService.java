@@ -1,7 +1,7 @@
 package com.project.hotelBookingSystem.service;
 
 import com.project.hotelBookingSystem.entity.Booking;
-import com.project.hotelBookingSystem.entity.Client;
+
 
 import java.util.List;
 

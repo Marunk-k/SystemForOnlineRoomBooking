@@ -13,8 +13,8 @@ public class Booking {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "client_id", nullable = false)
-    private Integer clientId;
+    @Column(name = "app_user_id", nullable = false)
+    private Integer appUserId;
 
     @Column(name = "room_id", nullable = false)
     private Integer roomId;

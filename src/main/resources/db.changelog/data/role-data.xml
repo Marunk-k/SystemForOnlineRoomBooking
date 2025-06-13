@@ -8,6 +8,7 @@
     <changeSet id="insert-role-data" author="you">
         <sql>
             INSERT INTO role (role_name) VALUES
+                                             ('Клиент'),
                                              ('Администратор'),
                                              ('Менеджер'),
                                              ('Горничная');
