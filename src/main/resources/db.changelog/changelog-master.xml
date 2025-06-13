@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.20.xsd">
+
+    <!-- Tables -->
+    <!-- Сначала создаем таблицы без зависимостей -->
+    <include file="table/role-table.xml" relativeToChangelogFile="true"/>
+    <include file="table/client-table.xml" relativeToChangelogFile="true"/>
+    <include file="table/room-table.xml" relativeToChangelogFile="true"/>
+
+    <!-- Затем таблицы с зависимостями -->
+    <include file="table/employee-table.xml" relativeToChangelogFile="true"/>
+    <include file="table/booking-table.xml" relativeToChangelogFile="true"/>
+    <include file="table/regulation-table.xml" relativeToChangelogFile="true"/>
+
+    <!-- Data -->
+    <include file="data/client-data.xml" relativeToChangelogFile="true"/>
+    <include file="data/role-data.xml" relativeToChangelogFile="true"/>
+    <include file="data/employee-data.xml" relativeToChangelogFile="true"/>
+    <include file="data/room-data.xml" relativeToChangelogFile="true"/>
+</databaseChangeLog>

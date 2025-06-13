@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.20.xsd">
+
+    <changeSet id="create-room-table" author="you">
+        <sql>
+            CREATE TABLE room (
+                                  id SERIAL PRIMARY KEY,
+                                  capacity INTEGER NOT NULL,
+                                  is_occupied BOOLEAN DEFAULT FALSE,
+                                  price_per_day INTEGER NOT NULL
+            );
+        </sql>
+    </changeSet>
+</databaseChangeLog>
