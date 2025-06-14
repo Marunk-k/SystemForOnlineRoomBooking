@@ -19,6 +19,11 @@ public class RegulationServiceImpl implements RegulationService {
     }
 
     @Override
+    public Regulation getRegulationById(Long id) {
+        return regulationRepository.findById(id).orElse(null);
+    }
+
+    @Override
     public Regulation addRegulation(Regulation regulation) {
         regulationRepository.save(regulation);
         return regulation;

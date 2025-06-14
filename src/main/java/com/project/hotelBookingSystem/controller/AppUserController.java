@@ -19,6 +19,11 @@ public class AppUserController {
         return appUserService.getAllAppUsers();
     }
 
+    @GetMapping("/getById/{id}")
+    public AppUser getAppUserById(@PathVariable Long id) {
+        return appUserService.getAppUserById(id);
+    }
+
     @GetMapping("/isUserExist/{login}/{password}")
     public AppUser isUserExist(@PathVariable String login, @PathVariable String password) {
         return appUserService.isUserExist(login, password);

@@ -20,6 +20,11 @@ public class AppUserServiceImpl implements AppUserService {
     }
 
     @Override
+    public AppUser getAppUserById(Long id) {
+        return appUserRepository.findById(id).orElse(null);
+    }
+
+    @Override
     public AppUser isUserExist(String login, String password) {
         Optional<AppUser> user = appUserRepository.findByEmailAndPassword(login, password);
         if (user.isPresent()) {

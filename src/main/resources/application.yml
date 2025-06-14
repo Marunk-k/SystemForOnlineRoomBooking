@@ -5,6 +5,10 @@ spring:
         url: jdbc:postgresql://localhost:5432/hotelBookingSystem
         username: postgres
         password: postgres
+        driver-class-name: org.postgresql.Driver
+        hikari:
+            minimum-idle: 5
+            maximum-pool-size: 20
     jpa:
         hibernate:
             ddl-auto: none

@@ -12,9 +12,15 @@ import java.util.List;
 @AllArgsConstructor
 public class RegulationController {
     private final RegulationService regulationService;
+
     @GetMapping("/getAll")
     public List<Regulation> getAllRegulations() {
         return regulationService.getAllRegulations();
+    }
+
+    @GetMapping("/getById/{id}")
+    public Regulation getRegulationById(@PathVariable Long id) {
+        return regulationService.getRegulationById(id);
     }
 
     @PostMapping("/add")

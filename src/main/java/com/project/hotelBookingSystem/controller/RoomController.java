@@ -1,5 +1,6 @@
 package com.project.hotelBookingSystem.controller;
 
+import com.project.hotelBookingSystem.entity.Regulation;
 import com.project.hotelBookingSystem.entity.Room;
 import com.project.hotelBookingSystem.service.RoomService;
 import lombok.AllArgsConstructor;
@@ -16,6 +17,11 @@ public class RoomController {
     @GetMapping("/getAll")
     public List<Room> getAllRooms() {
         return roomService.getAllRooms();
+    }
+
+    @GetMapping("/getById/{id}")
+    public Room getRoomById(@PathVariable Long id) {
+        return roomService.getRoomById(id);
     }
 
     @PostMapping("/add")
