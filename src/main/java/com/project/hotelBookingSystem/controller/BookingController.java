@@ -23,7 +23,7 @@ public class BookingController {
     }
 
     @GetMapping("/getByUserId/{id}")
-    public Optional<Booking> getBookingByUserId(@PathVariable Long id) {
+    public List<Booking> getBookingByUserId(@PathVariable Long id) {
         return bookingService.getBookingByUserId(id);
     }
 

@@ -20,8 +20,8 @@ public class BookingServiceImpl implements BookingService {
     }
 
     @Override
-    public Optional<Booking> getBookingByUserId(Long id) {
-        return bookingRepository.findById(id);
+    public List<Booking> getBookingByUserId(Long id) {
+        return bookingRepository.findByUserId(id);
     }
 
 
