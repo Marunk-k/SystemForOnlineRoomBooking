@@ -15,6 +15,7 @@
     <include file="table/booking-table.xml" relativeToChangelogFile="true"/>
     <include file="table/regulation-table.xml" relativeToChangelogFile="true"/>
     <include file="table/2v-booking-table.xml" relativeToChangelogFile="true"/>
+    <include file="table/app-query-table.xml" relativeToChangelogFile="true"/>
 
 
     <!-- Data -->
