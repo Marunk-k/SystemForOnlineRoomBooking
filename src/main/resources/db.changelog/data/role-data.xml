@@ -10,7 +10,7 @@
             INSERT INTO role (role_name) VALUES
                                              ('Клиент'),
                                              ('Администратор'),
-                                             ('Менеджер');
+                                             ('Модератор');
         </sql>
     </changeSet>
 </databaseChangeLog>

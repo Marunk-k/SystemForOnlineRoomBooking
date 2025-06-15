@@ -8,8 +8,9 @@
     <changeSet id="insert-app-user-data" author="you">
         <sql>
             INSERT INTO app_user (full_name, phone, email, password, role_id) VALUES
-                                                                                  ('Сидоров Алексей Петрович', '+79051234567', 'sidorov@hotel.com', 'admin123', 1),
-                                                                                  ('Кузнецова Ольга Викторовна', '+79061234567', 'kuznetsova@hotel.com', 'manager456', 2);
+                                                                                  ('Сидоров Алексей Петрович', '+79051234567', 'client', '1', 1),
+                                                                                  ('Кузнецова Ольга Викторовна', '+79061234567', 'admin', '1', 2),
+                                                                                  ('Кузнецова Ольга Викторовна', '+79061234567', 'moder', '1', 3);
         </sql>
     </changeSet>
 </databaseChangeLog>
