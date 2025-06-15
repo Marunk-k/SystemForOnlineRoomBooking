@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.time.LocalDate;
+
 @Entity
 @Getter
 @Setter
@@ -20,10 +22,10 @@ public class Booking {
     private Integer roomId;
 
     @Column(name = "check_in_date", nullable = false)
-    private String checkInDate;
+    private LocalDate checkInDate;
 
     @Column(name = "check_out_date", nullable = false)
-    private String checkOutDate;
+    private LocalDate checkOutDate;
 
     @Column(name = "total_amount", nullable = false)
     private Integer totalAmount;

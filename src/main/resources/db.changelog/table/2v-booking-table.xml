@@ -1,0 +1,14 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.20.xsd">
+
+    <changeSet id="alter-booking-date-columns" author="you">
+        <sql>
+            ALTER TABLE booking
+            ALTER COLUMN check_in_date TYPE DATE USING check_in_date::DATE,
+                ALTER COLUMN check_out_date TYPE DATE USING check_out_date::DATE;
+        </sql>
+    </changeSet>
+</databaseChangeLog>

@@ -6,6 +6,7 @@ import com.project.hotelBookingSystem.service.RoomService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Service
@@ -21,6 +22,16 @@ public class RoomServiceImpl implements RoomService {
     @Override
     public Room getRoomById(Long id) {
         return roomRepository.findById(id).orElse(null);
+    }
+
+    @Override
+    public List<Room> getAvailableRoomsWithoutCost(LocalDate checkInDate, LocalDate checkOutDate, int guestCount) {
+        return roomRepository.getAvailableRoomsWithoutCost(checkInDate, checkOutDate, guestCount);
+    }
+
+    @Override
+    public List<Room> getAvailableRoomsWithCost(LocalDate checkInDate, LocalDate checkOutDate, int guestCount, int minPricePerDay, int maxPricePerDay) {
+        return roomRepository.getAvailableRoomsWithCost(checkInDate, checkOutDate, guestCount, minPricePerDay, maxPricePerDay);
     }
 
     @Override
