@@ -1,6 +1,7 @@
 package com.project.hotelBookingSystem.controller;
 
 
+import com.project.hotelBookingSystem.entity.AppUser;
 import com.project.hotelBookingSystem.entity.Booking;
 import com.project.hotelBookingSystem.service.BookingService;
 
@@ -8,6 +9,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RequestMapping("/booking")
 @RestController
@@ -18,6 +20,11 @@ public class BookingController {
     @GetMapping("/getAll")
     public List<Booking> getAllBookings() {
         return bookingService.getAllBookings();
+    }
+
+    @GetMapping("/getByUserId/{id}")
+    public Optional<Booking> getBookingByUserId(@PathVariable Long id) {
+        return bookingService.getBookingByUserId(id);
     }
 
     @PostMapping("/add")

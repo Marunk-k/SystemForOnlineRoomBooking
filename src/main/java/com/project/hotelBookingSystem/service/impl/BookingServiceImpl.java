@@ -7,6 +7,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @AllArgsConstructor
@@ -17,6 +18,12 @@ public class BookingServiceImpl implements BookingService {
     public List<Booking> getAllBookings() {
         return bookingRepository.findAll();
     }
+
+    @Override
+    public Optional<Booking> getBookingByUserId(Long id) {
+        return bookingRepository.findById(id);
+    }
+
 
     @Override
     public Booking addBooking(Booking booking) {
