@@ -24,6 +24,11 @@ public class AppQueryController {
         return appQueryService.getAllAppQuery();
     }
 
+    @GetMapping("/getById/{id}")
+    public AppQuery getAppQueryById(@PathVariable Long id) {
+        return appQueryService.getAppQueryById(id);
+    }
+
     @PostMapping("/add")
     public AppQuery addAppQuery(@RequestBody AppQuery appQuery) {
         appQueryService.addAppQuery(appQuery);

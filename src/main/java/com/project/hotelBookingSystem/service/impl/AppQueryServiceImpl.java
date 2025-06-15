@@ -20,6 +20,11 @@ public class AppQueryServiceImpl implements AppQueryService {
     }
 
     @Override
+    public AppQuery getAppQueryById(Long id) {
+        return appQueryRepository.findById(id).orElse(null);
+    }
+
+    @Override
     public AppQuery addAppQuery(AppQuery appQuery) {
         appQueryRepository.save(appQuery);
         return appQuery;
